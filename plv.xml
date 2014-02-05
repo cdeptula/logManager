@@ -4,11 +4,6 @@
       <location path="${plv.biserver.dir}/tomcat/logs" name="/tomcat/logs" />
    </locations>
    <files>
-	<fileRegex regex="catalina.*" type="Catalina" />
-	<fileRegex regex="mondrian\.log.*" type="Mondrian" />
-	<fileRegex regex="mondrian\_mdx.*" type="Mondrian MDX" />
-	<fileRegex regex="mondrian\_sql.*" type="Mondrian SQL" />
-	<fileRegex regex="pentaho.*" type="Pentaho" />
-	<fileRegex regex=".*" type="Other" />
+	<fileRegex regex=".*" type="All" />
    </files>
 </plv>
