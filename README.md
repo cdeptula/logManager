@@ -41,3 +41,9 @@ Contributing
 ---
 
 The Log Manager plugin is a Sparkl application.  To contribute patches or enhancements Install Sparkl and the Log Manager plugin.  You will be able to edit and make improvements to the Log Manager plugin using the Sparkl plugin.
+
+Known Problems
+---
+
+- The Windows zip utility sees the downloaded zip of the log file as being empty.  You must use an alternative utility such as 7-zip.
+- The View Log button on Safari does not work.  It fails with a broken pipe error in the logs.
