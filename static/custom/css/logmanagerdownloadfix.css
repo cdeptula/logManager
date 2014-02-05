@@ -1,0 +1,26 @@
+.WDheader .refreshButtonCont{
+  width: 22px!important;
+  height: 100%;
+  float: right;
+}
+
+
+.WDheader .downloadButton {
+    width:22px!important;
+    height:100%;
+    float:right;
+    
+} 
+
+.WDheader .downloadButton button{
+  width: 16px;
+  height: 100%;
+  cursor: pointer;
+  box-shadow:none;
+  border: none;
+  background: url('../img/downloadSmall.png') no-repeat center center transparent;
+  float:right;
+  color:transparent;
+  overflow: hidden;
+}
+
