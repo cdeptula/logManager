@@ -690,6 +690,77 @@
     ]
    },
    {
+    "id": "34bd9180-b034-5845-c646-a322752a3866",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "developedCell",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "b7b5de99-fa31-a1a1-2ac3-75f46960ae43",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "34bd9180-b034-5845-c646-a322752a3866",
+    "properties": [
+     {
+      "name": "name",
+      "value": "DevelopedBy",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<p style=\"margin-top:10px\">Developed by Inquidia Consulting (<a href=\"http://www.inquidia.com\">www.inquidia.com</a>)</p> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
     "id": "0243a483-5524-0efe-144b-2863e0307b9c",
     "type": "LayoutRow",
     "typeDesc": "Row",
@@ -860,23 +931,13 @@
       "type": "JavaScript"
      },
      {
-      "name": "colTypes",
-      "value": "[\"hidden\",\"string\",\"string\",\"string\",\"numeric\",\"hidden\",\"actionButtons\"]",
-      "type": "colTypesCustom"
-     },
-     {
-      "name": "colFormats",
-      "value": "[]",
-      "type": "Array"
+      "name": "language",
+      "value": "",
+      "type": "JavaScript"
      },
      {
       "name": "colWidths",
       "value": "[\"0\",\"20%\",\"20%\",\"20%\",\"20%\",\"0\",\"20%\"]",
-      "type": "Array"
-     },
-     {
-      "name": "colSortable",
-      "value": "[\"false\",\"true\",\"true\",\"true\",\"true\",\"false\",\"false\"]",
       "type": "Array"
      },
      {
@@ -895,17 +956,22 @@
       "type": "Array"
      },
      {
-      "name": "displayLength",
-      "value": "50",
-      "type": "Integer"
+      "name": "colTypes",
+      "value": "[\"hidden\",\"string\",\"string\",\"string\",\"numeric\",\"hidden\",\"actionButtons\"]",
+      "type": "colTypesCustom"
+     },
+     {
+      "name": "colFormats",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "colSortable",
+      "value": "[\"false\",\"true\",\"true\",\"true\",\"true\",\"false\",\"false\"]",
+      "type": "Array"
      },
      {
       "name": "lengthChange",
-      "value": "true",
-      "type": "Boolean"
-     },
-     {
-      "name": "filter",
       "value": "true",
       "type": "Boolean"
      },
@@ -930,12 +996,27 @@
       "type": "Boolean"
      },
      {
+      "name": "displayLength",
+      "value": "50",
+      "type": "Integer"
+     },
+     {
+      "name": "filter",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "drawCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
       "name": "colSearchable",
       "value": "[\"2\"]",
       "type": "Array"
      },
      {
-      "name": "drawCallback",
+      "name": "sDom",
       "value": "",
       "type": "JavaScript"
      },
@@ -945,19 +1026,9 @@
       "type": "Datasource"
      },
      {
-      "name": "sDom",
-      "value": "",
-      "type": "JavaScript"
-     },
-     {
       "name": "sortBy",
       "value": "[[\"2\",\"asc\"]]",
       "type": "SortByArray"
-     },
-     {
-      "name": "refreshPeriod",
-      "value": "",
-      "type": "Integer"
      },
      {
       "name": "priority",
@@ -965,14 +1036,19 @@
       "type": "Integer"
      },
      {
-      "name": "tableStyle",
-      "value": "themeroller",
-      "type": "TableStyle"
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
      },
      {
       "name": "paginationType",
       "value": "two_button",
       "type": "PaginationType"
+     },
+     {
+      "name": "tableStyle",
+      "value": "themeroller",
+      "type": "TableStyle"
      },
      {
       "name": "htmlObject",
@@ -995,13 +1071,13 @@
       "type": "JavaScript"
      },
      {
-      "name": "postFetch",
-      "value": "function f(data){\n    if(!_.isEmpty(data)){\n        var fileNamesList = [];\n        _.each( data.resultset, function (el){\n            fileNamesList.push(el[5]);\n            var bookmark = {\n                fileNameParam : el[5],\n                fileSizeParam : el[4],\n                filePathParam : el[1],\n                shortFileNameParam : el[2]\n            };\n            el.push(bookmark); \n        });\n        \n        Dashboards.setParameter(\"${p:fileNamesListParam}\",fileNamesList);\n        data.metadata.push( $.extend( {} , data.metadata[0] ) );\n        var lastMetadataElIdx = data.metadata.length-1;\n        (data.metadata[lastMetadataElIdx]).colIndex = lastMetadataElIdx;\n    \n\n        //enable filtering and disable sort in the actions column\n        var objOpts = Dashboards.propertiesArrayToObject(this.extraOptions);        \n        objOpts['bFilter'] = true;\n        objOpts['aoColumnDefs'] = [\n            { 'bSortable': false, 'aTargets': [ 6 ] }\n        ]\n        this.extraOptions = Dashboards.objectToPropertiesArray( objOpts );\n        \n        return data;\n    }else{\n        data = sparkl.createElementsTableEmptyRawData();\n        return data;\n    }\n}",
+      "name": "postExecution",
+      "value": "",
       "type": "JavaScript"
      },
      {
-      "name": "postExecution",
-      "value": "",
+      "name": "postFetch",
+      "value": "function f(data){\n    if(!_.isEmpty(data)){\n        var fileNamesList = [];\n        _.each( data.resultset, function (el){\n            fileNamesList.push(el[5]);\n            var bookmark = {\n                fileNameParam : el[5],\n                fileSizeParam : el[4],\n                filePathParam : el[1],\n                shortFileNameParam : el[2]\n            };\n            el.push(bookmark); \n        });\n        \n        Dashboards.setParameter(\"${p:fileNamesListParam}\",fileNamesList);\n        data.metadata.push( $.extend( {} , data.metadata[0] ) );\n        var lastMetadataElIdx = data.metadata.length-1;\n        (data.metadata[lastMetadataElIdx]).colIndex = lastMetadataElIdx;\n    \n\n        //enable filtering and disable sort in the actions column\n        var objOpts = Dashboards.propertiesArrayToObject(this.extraOptions);        \n        objOpts['bFilter'] = true;\n        objOpts['aoColumnDefs'] = [\n            { 'bSortable': false, 'aTargets': [ 6 ] }\n        ]\n        this.extraOptions = Dashboards.objectToPropertiesArray( objOpts );\n        \n        return data;\n    }else{\n        data = sparkl.createElementsTableEmptyRawData();\n        return data;\n    }\n}",
       "type": "JavaScript"
      },
      {
@@ -1526,6 +1602,16 @@
       "name": "name",
       "value": "getLogFiles",
       "type": "Id"
+     },
+     {
+      "name": "stepName",
+      "value": "OUTPUT",
+      "type": "String"
+     },
+     {
+      "name": "kettleOutput",
+      "value": "Inferred",
+      "type": "kettleOutputCustom"
      }
     ],
     "meta": "CPK",

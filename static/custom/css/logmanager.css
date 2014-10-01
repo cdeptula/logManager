@@ -105,7 +105,7 @@ div.container *{
   white-space: nowrap;
 }
 .WDheader .refreshButtonCont{
-  width: 50%;
+  width: 25px;
   height: 100%;
   float: right;
 }
@@ -537,6 +537,19 @@ tbody td.actionButtons button:last-child {
 tbody td.actionButtons button:hover{
   color:#333;
 }
+
+tbody tr.even {
+  background-color: #FFFFFF!important;
+}
+
+tbody tr.odd {
+  background-color: rgb(226, 228, 255)!important;
+}
+
+tbody tr {
+  height:39px!important;
+}
+
 tbody tr:nth-child(even) td.actionButtons button {
   background-color: #FFFFFF;
 }
