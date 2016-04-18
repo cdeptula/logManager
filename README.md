@@ -3,7 +3,7 @@ Pentaho Log Manager
 
 The Pentaho Log Manager plugin for Pentaho BI Server allows you to view, download, and delete log files accessible from the BI Server file system.  The plugin is available to anyone with access to the Tools menu in BI Server which by default is only administrators.
 
-A big thank you to my employer [OpenBI](http://www.openbi.com) for allowing me to open source this plugin.
+A big thank you to my employer [Inquidia Consulting](http://www.inquidia.com) for allowing me to open source this plugin.
 
 System Requirements
 ---
