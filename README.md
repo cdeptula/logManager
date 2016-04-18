@@ -7,7 +7,7 @@ A big thank you to my employer [OpenBI](http://www.openbi.com) for allowing me t
 
 System Requirements
 ---
-- Pentaho BI Server 5.x or above
+- Pentaho BI Server 6.x or above
 - Pentaho Ctools (CDE, CDA, CDF, CGG)
 
 Installation
